@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Identities</title>
+<link rel="stylesheet"type="text/css"href="styles.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #e6f7ff, #ccf2ff);
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066cc;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        .welcome-note {
+            background-color: #cceeff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0044cc;
+            font-size: 1.2em;
+            animation: fadeInUp 2s;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            animation: fadeInUp 2s;
+        }
+
+        .content-text {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .content-text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #0044cc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            animation: fadeInUp 2s;
+        }
+
+        .diagram {
+            width: 40%;
+            padding-left: 20px;
+            animation: slideIn 1.5s;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .back:hover {
+            color: #003399;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+  <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+<div class="container">
+        <h1>Trigonometric Identities</h1>
+
+        <!-- Welcome Note -->
+        <div class="welcome-note">
+            <p>Welcome to the world of <strong>Trigonometric Identities</strong>! These are fundamental tools used to simplify and solve complex trigonometric expressions. Mastering these identities will not only make problem-solving easier but will also give you a deeper understanding of trigonometric functions and their relationships. Let's dive in and explore the most essential identities in trigonometry!</p>
+        </div>
+
+        <!-- Definition -->
+        <div class="content">
+            <div class="content-text">
+                <h2 align="left" class="section-title">What are Trigonometric Identities?</h2>
+                <p>Trigonometric identities are equations that involve trigonometric functions and are true for every value of the variables involved. They provide useful relationships between different trigonometric functions and help in simplifying and solving complex trigonometric equations.</p>
+            </div>
+            <div class="diagram">
+                <img src="Documents/Proving Basic Trigonometric Identities.PNG" width="2048" height="1152" alt="Trigonometric Identities Diagram">            </div>
+        </div>
+
+        <!-- Fundamental Identities -->
+        <!-- Co-Function Identities -->
+<div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Co-Function Identities</h2>
+                <p>Co-function identities relate the trigonometric functions of complementary angles (angles that add up to \( 90^\circ \) or \( \frac{\pi}{2} \)). For example:</p>
+                <ul>
+                    <li><strong>Co-function:</strong> \( \sin(90^\circ - \theta) = \cos \theta \)</li>
+                </ul>
+            </div>
+            <div class="diagram">
+              <p><img src="Documents/cofunction-identities-in-trigonometry-with-proof-and-examples.png" width="1200" height="675"></p>
+              <p>&nbsp;</p>
+            </div>
+  </div>
+
+        <!-- Sum and Difference -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Sum and Difference Identities</h2>
+                <p>These identities allow us to find the trigonometric function of an angle that is a sum or difference of two known angles. Example:</p>
+                <ul>
+                    <li>\( \sin(A \pm B) = \sin A \cos B \pm \cos A \sin B \)</li>
+                </ul>
+            </div>
+            <div class="diagram">
+                <img src="Documents/sum-and-difference-formulas.png" width="1200" height="675" alt="Sum and Difference Identities Diagram">            </div>
+        </div>
+
+        <!-- Double Angle Identities -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Double Angle Identities</h2>
+                <p>Double angle identities are used to express trigonometric functions of double angles in terms of single angles:</p>
+                <ul>
+                    <li>\( \sin 2\theta = 2\sin \theta \cos \theta \)</li>
+                </ul>
+            </div>
+            <div class="diagram">
+                <img src="Documents/double-angle-formulae-list.png" width="1208" height="686" alt="Double Angle Identities Diagram">            </div>
+        </div>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

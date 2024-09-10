@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Area</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .post-form, .comment-form {
+            margin-bottom: 30px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .post {
+            background-color: #fafafa;
+            padding: 20px;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 15px;
+        }
+        .comment {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .delete-btn {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+<div class="container">
+    <h1>Discussion Area</h1>
+
+    <!-- Admin Post Form -->
+    <div class="post-form">
+        <h2>Admin Post</h2>
+        <form id="adminPostForm">
+            <input type="text" id="adminTitle" placeholder="Enter discussion topic" required>
+            <textarea id="adminMessage" rows="5" placeholder="Enter your message" required></textarea>
+            <input type="submit" value="Post as Admin">
+        </form>
+    </div>
+
+    <!-- Display Posts (This section will be dynamically updated) -->
+    <div id="postsContainer">
+        <!-- Posts will be appended here -->
+    </div>
+
+    <!-- Comment Form -->
+    <div class="comment-form" style="display: none;" id="commentSection">
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+            <textarea id="userComment" rows="4" placeholder="Enter your comment" required></textarea>
+            <input type="submit" value="Post Comment">
+        </form>
+    </div>
+
+</div>
+
+<script>
+    const adminPostForm = document.getElementById('adminPostForm');
+    const postsContainer = document.getElementById('postsContainer');
+    const commentForm = document.getElementById('commentForm');
+    const commentSection = document.getElementById('commentSection');
+
+    let currentPostId = null;
+
+    // Retrieve posts from localStorage or initialize an empty array
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+    // Load posts from localStorage on page load
+    window.onload = function() {
+        renderPosts();
+    }
+
+    // Handle admin post submission
+    adminPostForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const title = document.getElementById('adminTitle').value;
+        const message = document.getElementById('adminMessage').value;
+
+        const postId = posts.length + 1;
+        const post = {
+            id: postId,
+            title: title,
+            message: message,
+            comments: []
+        };
+
+        posts.push(post);
+
+        // Save posts to localStorage
+        localStorage.setItem('posts', JSON.stringify(posts));
+
+        renderPosts();
+        adminPostForm.reset();
+    });
+
+    // Handle comment submission
+    commentForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const comment = document.getElementById('userComment').value;
+
+        posts.forEach(post => {
+            if (post.id === currentPostId) {
+                post.comments.push(comment);
+            }
+        });
+
+        // Save updated posts with comments to localStorage
+        localStorage.setItem('posts', JSON.stringify(posts));
+
+        renderPosts();
+        commentForm.reset();
+        commentSection.style.display = 'none';
+    });
+
+    // Function to render posts and comments
+    function renderPosts() {
+        postsContainer.innerHTML = '';
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'post';
+            postElement.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.message}</p>
+                <button onclick="showCommentForm(${post.id})">Comment</button>
+                <button class="delete-btn" onclick="deletePost(${post.id})">Delete Post</button>
+            `;
+
+            // Render comments
+            post.comments.forEach((comment, index) => {
+                const commentElement = document.createElement('div');
+                commentElement.className = 'comment';
+                commentElement.innerHTML = `
+                    <p>${comment}</p>
+                    <button class="delete-btn" onclick="deleteComment(${post.id}, ${index})">Delete Comment</button>
+                `;
+                postElement.appendChild(commentElement);
+            });
+
+            postsContainer.appendChild(postElement);
+        });
+    }
+
+    // Function to show comment form for a specific post
+    function showCommentForm(postId) {
+        currentPostId = postId;
+        commentSection.style.display = 'block';
+    }
+
+    // Function to delete a post
+    function deletePost(postId) {
+        posts = posts.filter(post => post.id !== postId);
+        localStorage.setItem('posts', JSON.stringify(posts));
+        renderPosts();
+    }
+
+    // Function to delete a comment
+    function deleteComment(postId, commentIndex) {
+        posts.forEach(post => {
+            if (post.id === postId) {
+                post.comments.splice(commentIndex, 1); // Remove the comment at the specified index
+            }
+        });
+        localStorage.setItem('posts', JSON.stringify(posts));
+        renderPosts();
+    }
+</script>
+
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

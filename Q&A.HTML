@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .welcome-note {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .question-form, .questions {
+            margin-bottom: 20px;
+        }
+
+        .question-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .question-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .question {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .question h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+
+        .delete-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .answer-form {
+            margin-top: 20px;
+        }
+
+        .answer-form textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .answer-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .answer {
+            background-color: #f9f9f9;
+            border-left: 3px solid #007BFF;
+            padding: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .answer .delete-button {
+            background-color: #dc3545;
+        }
+
+      
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+<div class="container">
+    <h1>Q&A</h1>
+
+    <!-- Welcome Note -->
+    <div class="welcome-note">
+        <h2>Welcome to the Q&A Section!</h2>
+        <p>Here you can ask questions related to trigonometry and help others by providing answers. Use the search bar to find questions that interest you, or submit your own questions for the community to answer.</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search questions...">
+        <input type="submit" value="Search" onclick="searchQuestions()">
+    </div>
+
+    <!-- Submit Question Form -->
+    <div class="question-form">
+        <h2>Ask a Question</h2>
+        <textarea id="questionText" placeholder="Type your question here..."></textarea>
+        <input type="submit" value="Submit Question" onclick="submitQuestion()">
+    </div>
+
+    <!-- Display Questions -->
+    <div id="questionsList" class="questions">
+        <!-- Questions will be dynamically added here -->
+    </div>
+</div>
+
+<script>
+    // Load questions from local storage
+    function loadQuestions() {
+        const questionsList = JSON.parse(localStorage.getItem('questions')) || [];
+        const questionsContainer = document.getElementById('questionsList');
+        questionsContainer.innerHTML = '';
+
+        questionsList.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+            questionDiv.innerHTML = `
+                <button class="delete-button" onclick="deleteQuestion(${index})">Delete Question</button>
+                <h2>Question ${index + 1}</h2>
+                <p>${question.text}</p>
+                <div class="answer-form">
+                    <h3>Provide an Answer</h3>
+                    <textarea id="answerText-${index}" placeholder="Type your answer here..."></textarea>
+                    <input type="submit" value="Submit Answer" onclick="submitAnswer(${index})">
+                </div>
+                <div id="answers-${index}">
+                    ${question.answers.map((answer, answerIndex) => `
+                        <div class="answer">
+                            ${answer}
+                            <button class="delete-button" onclick="deleteAnswer(${index}, ${answerIndex})">Delete Answer</button>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            questionsContainer.appendChild(questionDiv);
+        });
+    }
+
+    // Submit a new question
+    function submitQuestion() {
+        const questionText = document.getElementById('questionText').value.trim();
+        if (questionText) {
+            const questionsList = JSON.parse(localStorage.getItem('questions')) || [];
+            questionsList.push({ text: questionText, answers: [] });
+            localStorage.setItem('questions', JSON.stringify(questionsList));
+            document.getElementById('questionText').value = '';
+            loadQuestions();
+        }
+    }
+
+    // Submit an answer to a specific question
+    function submitAnswer(index) {
+        const answerText = document.getElementById(`answerText-${index}`).value.trim();
+        if (answerText) {
+            const questionsList = JSON.parse(localStorage.getItem('questions')) || [];
+            questionsList[index].answers.push(answerText);
+            localStorage.setItem('questions', JSON.stringify(questionsList));
+            document.getElementById(`answerText-${index}`).value = '';
+            loadQuestions();
+        }
+    }
+
+    // Delete a specific question
+    function deleteQuestion(index) {
+        const questionsList = JSON.parse(localStorage.getItem('questions')) || [];
+        questionsList.splice(index, 1);
+        localStorage.setItem('questions', JSON.stringify(questionsList));
+        loadQuestions();
+    }
+
+    // Delete a specific answer
+    function deleteAnswer(questionIndex, answerIndex) {
+        const questionsList = JSON.parse(localStorage.getItem('questions')) || [];
+        questionsList[questionIndex].answers.splice(answerIndex, 1);
+        localStorage.setItem('questions', JSON.stringify(questionsList));
+        loadQuestions();
+    }
+
+    // Search questions based on input
+    function searchQuestions() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const questionsList = JSON.parse(localStorage.getItem('questions')) || [];
+        const filteredQuestions = questionsList.filter(question => question.text.toLowerCase().includes(searchInput));
+        const questionsContainer = document.getElementById('questionsList');
+        questionsContainer.innerHTML = '';
+
+        filteredQuestions.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+            questionDiv.innerHTML = `
+                <button class="delete-button" onclick="deleteQuestion(${index})">Delete Question</button>
+                <h2>Question ${index + 1}</h2>
+                <p>${question.text}</p>
+                <div class="answer-form">
+                    <h3>Provide an Answer</h3>
+                    <textarea id="answerText-${index}" placeholder="Type your answer here..."></textarea>
+                    <input type="submit" value="Submit Answer" onclick="submitAnswer(${index})">
+                </div>
+                <div id="answers-${index}">
+                    ${question.answers.map((answer, answerIndex) => `
+                        <div class="answer">
+                            ${answer}
+                            <button class="delete-button" onclick="deleteAnswer(${index}, ${answerIndex})">Delete Answer</button>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            questionsContainer.appendChild(questionDiv);
+        });
+    }
+
+    // Initial load
+    loadQuestions();
+</script>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

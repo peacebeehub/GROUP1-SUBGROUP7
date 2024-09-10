@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Solver</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 20px;
+        }
+        .calculator {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        input[type="number"], select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 4px;
+        }
+    .style1 {color: #FFFFFF}
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="calculator">
+        <h1><span class="logo"><a href="#" style="font-size: 24px; font-weight: bold; color: #fff;"><img src="Documents/ntriangle solver.jpg" width="200" height="200"></a></span><span class="style1">_____________________</span><a href="#" style="font-size: 24px; font-weight: bold; color: #fff;"><img src="Documents/ntriangle solver.jpg" width="200" height="200"></a></h1>
+        <h1 align="center">Triangle Solver</h1>
+        <p>A Triangle Solver is a tool designed to help you solve various types of problems involving triangles.
+        It allows you to calculate unknown angles and sides of a triangle when given certain known values.
+        Additionally, it can help you determine the type of triangle based on its angles.
+        Whether you're dealing with angles, sides, or both, this tool provides a straightforward way to perform these calculations and obtain accurate results.</p>
+
+        <!-- Calculate Missing Angle -->
+        <div class="section">
+            <h2>Calculate Missing Angle</h2>
+            (Given two angles in a triangle, to find the other angle)
+            <input type="number" id="angleA" placeholder="Angle A" step="any">
+            <input type="number" id="angleB" placeholder="Angle B" step="any">
+            <input type="number" id="angleC" placeholder="Angle C" step="any">
+            <button onClick="calculateMissingAngle()">Calculate Missing Angle</button>
+            <button onClick="clearSection('angle')">Clear</button>
+            <div id="angleResult" class="result"></div>
+        </div>
+
+        <!-- Calculate Missing Side (Angle & Two Sides) -->
+        <div class="section">
+            <h2>Calculate Missing Side</h2>
+            (Given two sides with angle between them, to find the other side of the triangle)
+            <input type="number" id="side1" placeholder="Side 1" step="any">
+            <input type="number" id="side2" placeholder="Side 2" step="any">
+            <input type="number" id="angle" placeholder="Angle (degrees)" step="any">
+            <button onClick="calculateMissingSide()">Calculate Missing Side</button>
+            <button onClick="clearSection('side')">Clear</button>
+            <div id="sideResult" class="result"></div>
+        </div>
+
+        <!-- Calculate Angles from Given 3 Sides -->
+        <div class="section">
+            <h2>Calculate Angles from 3 Sides</h2>
+            (Given three sides to find the angles between them)
+            <input type="number" id="sideA_3" placeholder="Side A" step="any">
+            <input type="number" id="sideB_3" placeholder="Side B" step="any">
+            <input type="number" id="sideC_3" placeholder="Side C" step="any">
+            <button onClick="calculateAnglesFromSides()">Calculate Angles</button>
+            <button onClick="clearSection('anglesFromSides')">Clear</button>
+            <div id="anglesFromSidesResult" class="result"></div>
+        </div>
+
+        <!-- Calculate Missing Side (3 Angles & 2 Sides) -->
+        <div class="section">
+            <h2>Calculate Missing Side</h2>
+            (Given three angles with two known sides, to find the other side)
+            <input type="number" id="angle1" placeholder="Angle 1" step="any">
+            <input type="number" id="angle2" placeholder="Angle 2" step="any">
+            <input type="number" id="angle3" placeholder="Angle 3" step="any">
+            <input type="number" id="side1_2" placeholder="Known Side 1" step="any">
+            <input type="number" id="side2_2" placeholder="Known Side 2" step="any">
+            <button onClick="calculateMissingSideFromAngles()">Calculate Missing Side</button>
+            <button onClick="clearSection('sideFromAngles')">Clear</button>
+            <div id="sideFromAnglesResult" class="result"></div>
+        </div>
+
+        <!-- Identify Triangle Type -->
+        <div class="section">
+            <h2>Identify Triangle Type</h2>
+            <p>Enter the three angles of the triangle to determine if it can form a valid triangle and identify its type.</p>
+            <input type="number" id="angleA_type" placeholder="Angle A" step="any">
+            <input type="number" id="angleB_type" placeholder="Angle B" step="any">
+            <input type="number" id="angleC_type" placeholder="Angle C" step="any">
+            <button onClick="identifyTriangleType()">Identify Triangle Type</button>
+            <button onClick="clearSection('type')">Clear</button>
+            <div id="typeResult" class="result"></div>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="section">
+            <button onClick="resetCalculator()">Reset All</button>
+        </div>
+</div>
+
+    <script>
+        function calculateMissingAngle() {
+            const angleA = parseFloat(document.getElementById('angleA').value);
+            const angleB = parseFloat(document.getElementById('angleB').value);
+            const angleC = parseFloat(document.getElementById('angleC').value);
+            
+            if (isNaN(angleA) && isNaN(angleB) && isNaN(angleC)) {
+                document.getElementById('angleResult').textContent = 'Please enter at least two angles.';
+                return;
+            }
+
+            let missingAngle;
+            if (!isNaN(angleA) && !isNaN(angleB)) {
+                missingAngle = 180 - angleA - angleB;
+                document.getElementById('angleC').value = missingAngle.toFixed(2);
+            } else if (!isNaN(angleA) && !isNaN(angleC)) {
+                missingAngle = 180 - angleA - angleC;
+                document.getElementById('angleB').value = missingAngle.toFixed(2);
+            } else if (!isNaN(angleB) && !isNaN(angleC)) {
+                missingAngle = 180 - angleB - angleC;
+                document.getElementById('angleA').value = missingAngle.toFixed(2);
+            }
+            
+            document.getElementById('angleResult').textContent = `The missing angle is: ${missingAngle.toFixed(2)}°`;
+        }
+
+        function calculateMissingSide() {
+            const side1 = parseFloat(document.getElementById('side1').value);
+            const side2 = parseFloat(document.getElementById('side2').value);
+            const angle = parseFloat(document.getElementById('angle').value);
+            
+            if (isNaN(side1) || isNaN(side2) || isNaN(angle)) {
+                document.getElementById('sideResult').textContent = 'Please enter all values.';
+                return;
+            }
+            
+            const angleRad = angle * (Math.PI / 180);
+            const side3 = Math.sqrt(side1 * side1 + side2 * side2 - 2 * side1 * side2 * Math.cos(angleRad));
+            document.getElementById('sideResult').textContent = `The missing side is: ${side3.toFixed(2)}`;
+        }
+
+        function calculateAnglesFromSides() {
+            const sideA = parseFloat(document.getElementById('sideA_3').value);
+            const sideB = parseFloat(document.getElementById('sideB_3').value);
+            const sideC = parseFloat(document.getElementById('sideC_3').value);
+            
+            if (isNaN(sideA) || isNaN(sideB) || isNaN(sideC)) {
+                document.getElementById('anglesFromSidesResult').textContent = 'Please enter all values.';
+                return;
+            }
+            
+            const angleA = Math.acos((sideB * sideB + sideC * sideC - sideA * sideA) / (2 * sideB * sideC)) * (180 / Math.PI);
+            const angleB = Math.acos((sideA * sideA + sideC * sideC - sideB * sideB) / (2 * sideA * sideC)) * (180 / Math.PI);
+            const angleC = 180 - angleA - angleB;
+            
+            document.getElementById('anglesFromSidesResult').textContent = `The angles are: ${angleA.toFixed(2)}°, ${angleB.toFixed(2)}°, and ${angleC.toFixed(2)}°.`;
+        }
+
+        function calculateMissingSideFromAngles() {
+            const angle1 = parseFloat(document.getElementById('angle1').value);
+            const angle2 = parseFloat(document.getElementById('angle2').value);
+            const angle3 = parseFloat(document.getElementById('angle3').value);
+            const side1 = parseFloat(document.getElementById('side1_2').value);
+            const side2 = parseFloat(document.getElementById('side2_2').value);
+            
+            if (isNaN(angle1) || isNaN(angle2) || isNaN(angle3) || isNaN(side1) || isNaN(side2)) {
+                document.getElementById('sideFromAnglesResult').textContent = 'Please enter all values.';
+                return;
+            }
+
+            const side3 = (side1 * side2 * Math.sin(angle3 * Math.PI / 180)) / Math.sin(angle1 * Math.PI / 180);
+            
+            document.getElementById('sideFromAnglesResult').textContent = `The missing side is: ${side3.toFixed(2)}`;
+        }
+
+        function identifyTriangleType() {
+            const angleA = parseFloat(document.getElementById('angleA_type').value);
+            const angleB = parseFloat(document.getElementById('angleB_type').value);
+            const angleC = parseFloat(document.getElementById('angleC_type').value);
+            const typeResult = document.getElementById('typeResult');
+
+            if (isNaN(angleA) || isNaN(angleB) || isNaN(angleC)) {
+                typeResult.textContent = 'Please enter all three angles.';
+                return;
+            }
+
+            const totalAngles = angleA + angleB + angleC;
+
+            if (totalAngles !== 180) {
+                typeResult.textContent = 'The angles do not form a valid triangle. The sum of the angles must be exactly 180 degrees.';
+                return;
+            }
+
+            let triangleType = '';
+            let explanation = '';
+
+            // Check for acute-angled, obtuse-angled, and right-angled triangle
+            if (angleA < 90 && angleB < 90 && angleC < 90) {
+                triangleType = 'Acute-Angled Triangle';
+                explanation = 'All angles are less than 90 degrees, making it an acute-angled triangle.';
+            } else if (angleA > 90 || angleB > 90 || angleC > 90) {
+                triangleType = 'Obtuse-Angled Triangle';
+                explanation = 'One angle is greater than 90 degrees, making it an obtuse-angled triangle.';
+            } else {
+                triangleType = 'Right-Angled Triangle';
+                explanation = 'One angle is exactly 90 degrees, making it a right-angled triangle.';
+            }
+
+            // Check for equilateral and isosceles triangle
+            if (angleA === angleB && angleB === angleC) {
+                triangleType = 'Equilateral Triangle';
+                explanation = 'All angles are equal (60 degrees each), making it an equilateral triangle.';
+            } else if (angleA === angleB || angleB === angleC || angleC === angleA) {
+                triangleType = 'Isosceles Triangle';
+                explanation = 'At least two angles are equal, making it an isosceles triangle.';
+            }
+
+            typeResult.textContent = `The angles form a valid triangle. It is a ${triangleType}. ${explanation}`;
+        }
+
+        function clearSection(section) {
+            const sectionIds = {
+                'angle': ['angleA', 'angleB', 'angleC', 'angleResult'],
+                'side': ['side1', 'side2', 'angle', 'sideResult'],
+                'anglesFromSides': ['sideA_3', 'sideB_3', 'sideC_3', 'anglesFromSidesResult'],
+                'sideFromAngles': ['angle1', 'angle2', 'angle3', 'side1_2', 'side2_2', 'sideFromAnglesResult'],
+                'type': ['angleA_type', 'angleB_type', 'angleC_type', 'typeResult']
+            };
+
+            sectionIds[section].forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    if (element.type === 'number') {
+                        element.value = '';
+                    } else {
+                        element.textContent = '';
+                    }
+                }
+            });
+        }
+
+        function resetCalculator() {
+            // Clear all inputs and results
+            const allInputs = document.querySelectorAll('input[type="number"]');
+            allInputs.forEach(input => input.value = '');
+
+            const allResults = document.querySelectorAll('.result');
+            allResults.forEach(result => result.textContent = '');
+        }
+    </script>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

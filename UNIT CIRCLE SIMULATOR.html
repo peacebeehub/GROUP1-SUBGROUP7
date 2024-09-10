@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Unit Circle Simulator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #0066ff, #00ccff);
+            color: black;
+            margin: 0;
+            padding-top: 60px; /* To avoid overlap with the navbar */
+        }
+
+   
+        .container {
+            width: 90%;
+            padding: 20px;
+            background-color: LIGHT GREEN; /* Brighter color */
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto;
+	    font-size: 1.8em;
+
+        }
+
+        #unitCircle {
+            width: 100%;
+            max-width: 500px;
+            height: 500px;
+            margin: 20px auto;
+        }
+
+        #inputs, #results {
+            margin-top: 20px;
+        }
+
+        .input-item, .result-item {
+            margin-bottom: 10px;
+        }
+
+        canvas {
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    .style1 {color: #FFFFFF}
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Unit Circle Simulator</h1>
+        <ul>
+          <div align="left"><img src="Documents/unit circle calc.jpg" width="200" height="200"><span class="style1">__________________________________________________________</span><img src="Documents/unit circle calc.jpg" width="200" height="200"></div>
+        </ul>
+        <p>The Unit Circle Simulator is an interactive tool that visually represents the unit circle, a fundamental concept in trigonometry. The unit circle is a circle with a radius of 1 centered at the origin (0,0) on a coordinate plane. It's used to define the trigonometric functions sine, cosine, and tangent for all real numbers and to visualize the relationship between angles and the coordinates of points on the circle.</p>
+        <div id="unitCircle">
+            <canvas id="circleCanvas" width="500" height="500"></canvas>
+        </div>
+        <div id="inputs">
+            <div class="input-item">
+                <label for="angleInput">Angle (degrees): </label>
+                <input type="number" id="angleInput" value="0" min="0" max="360">
+            </div>
+        </div>
+        <div id="results">
+            <div class="result-item">
+                <p>Sine: <span id="sineResult"></span></p>
+            </div>
+            <div class="result-item">
+                <p>Cosine: <span id="cosineResult"></span></p>
+            </div>
+            <div class="result-item">
+                <p>Tangent: <span id="tangentResult"></span></p>
+            </div>
+            <div class="result-item">
+                <p>Quadrant: <span id="quadrantResult"></span></p>
+            </div>
+        </div>
+</div>
+
+    <script>
+        const canvas = document.getElementById('circleCanvas');
+        const ctx = canvas.getContext('2d');
+        const angleInput = document.getElementById('angleInput');
+        const sineResult = document.getElementById('sineResult');
+        const cosineResult = document.getElementById('cosineResult');
+        const tangentResult = document.getElementById('tangentResult');
+        const quadrantResult = document.getElementById('quadrantResult');
+
+        function drawUnitCircle(angle) {
+            const radius = canvas.width / 2;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the unit circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+            ctx.stroke();
+
+            // Calculate point position
+            const radians = angle * (Math.PI / 180);
+            const x = centerX + radius * Math.cos(radians);
+            const y = centerY - radius * Math.sin(radians);
+
+            // Draw the radius line
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.lineTo(x, y);
+            ctx.strokeStyle = '#ff0000';
+            ctx.stroke();
+
+            // Draw the point
+            ctx.beginPath();
+            ctx.arc(x, y, 5, 0, 2 * Math.PI);
+            ctx.fillStyle = '#0000ff';
+            ctx.fill();
+
+            // Draw the quadrants
+            ctx.beginPath();
+            ctx.moveTo(centerX, 0);
+            ctx.lineTo(centerX, canvas.height);
+            ctx.moveTo(0, centerY);
+            ctx.lineTo(canvas.width, centerY);
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            // Display results
+            const sine = Math.sin(radians).toFixed(3);
+            const cosine = Math.cos(radians).toFixed(3);
+            const tangent = Math.tan(radians).toFixed(3);
+            let quadrant;
+            if (angle > 0 && angle < 90) quadrant = 1;
+            else if (angle > 90 && angle < 180) quadrant = 2;
+            else if (angle > 180 && angle < 270) quadrant = 3;
+            else quadrant = 4;
+
+            sineResult.textContent = sine;
+            cosineResult.textContent = cosine;
+            tangentResult.textContent = tangent;
+            quadrantResult.textContent = quadrant;
+        }
+
+        angleInput.addEventListener('input', () => {
+            const angle = parseFloat(angleInput.value);
+            drawUnitCircle(angle);
+        });
+
+        // Initial draw
+        drawUnitCircle(0);
+    </script>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

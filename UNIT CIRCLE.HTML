@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Circle</title>
+<link rel="stylesheet"type="text/css"href="styles.css"/> 
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #f4f4f4, #ddd);
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0044cc;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        .welcome-note {
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0044cc;
+            font-size: 1.2em;
+            animation: fadeInUp 2s;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s;
+        }
+
+        .content-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #0044cc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .diagram {
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .diagram img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .back:hover {
+            color: #003399;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<style type="text/css">
+<!--
+p.MsoNormal {
+margin-top:0cm;
+margin-right:0cm;
+margin-bottom:8.0pt;
+margin-left:0cm;
+line-height:107%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+<div class="container">
+        <h1>Unit Circle</h1>
+
+        <!-- Welcome Note -->
+        <div class="welcome-note">
+            <p>Welcome to the Unit Circle section! The unit circle is a fundamental concept in trigonometry that helps us understand the relationship between angles and the coordinates of points on a circle. It's a powerful tool for solving trigonometric problems and visualizing the behavior of trigonometric functions.</p>
+            <p>In this section, we will explore the unit circle, learn about its key concepts, and see how it connects to trigonometric functions. We will also provide interactive elements to help you visualize and understand the unit circle better.</p>
+            <p>Let's dive into the world of the unit circle and discover how it simplifies trigonometric calculations and reveals the beauty of mathematical patterns.</p>
+        </div>
+
+        <!-- Definition and Purpose -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Definition and Purpose</h2>
+                <p>The unit circle is a circle with a radius of 1 unit centered at the origin of a coordinate plane. It is used to define the trigonometric functions sine, cosine, and tangent for all angles. The unit circle provides a way to visualize these functions and understand their behavior as angles change.</p>
+            </div>
+            <div class="diagram">
+                <img src="Documents/OIP.jpeg" width="474" height="445" alt="Unit Circle">            </div>
+        </div>
+
+        <!-- Radians and Degrees -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Radians and Degrees</h2>
+                <p>Angles in the unit circle can be measured in both degrees and radians. A full circle is 360 degrees or 2π radians. To convert between degrees and radians, use the following formulas:</p>
+                <ul>
+                  <li>
+                    <p><img width="341" height="32" src="UNIT CIRCLE_clip_image002_0002.png"><strong></strong></p>
+                  </li>
+                  <li>
+                    <p><img width="344" height="34" src="UNIT CIRCLE_clip_image004_0001.png"><strong></strong></p>
+                  </li>
+                </ul>
+          </div>
+            <div class="diagram">
+                <p><img src="Documents/R.png" width="945" height="709" alt="Radians and Degrees">            </p>
+            </div>
+        </div>
+
+        <!-- Trigonometric Functions -->
+        <div class="content">
+          <div class="content-text">
+                <h2 class="section-title">Trigonometric Functions</h2>
+                <p>In the unit circle, trigonometric functions are defined as follows:</p>
+              <ul>
+                  <li>
+                    <p><strong>Sine (sin θ):</strong> The y-coordinate of the point on the unit circle corresponding to the angle θ.</p>
+                  </li>
+                  <li>
+                    <p><strong>Cosine (cos θ):</strong> The x-coordinate of the point on the unit circle corresponding to the angle θ.</p>
+                  </li>
+                  <li>                      
+                    <p><strong>Tangent (tan θ):</strong> The ratio of the sine to the cosine: <code>tan θ = sin θ / cos θ</code>.</p>
+                  </li>
+            </ul>
+            </div>
+            <div class="diagram">
+                <img src="Documents/R.jpeg" width="1280" height="720" alt="Trigonometric Functions">            </div>
+        </div>
+
+        <!-- Special Angles -->
+        <div class="content">
+          <div class="content-text">
+                <h2 class="section-title">Special Angles</h2>
+                <p>Some angles are particularly important in trigonometry. Here are the sine and cosine values for these special angles:</p>
+                <ul>
+                  <li>
+                    <p><img src="UNIT CIRCLE_clip_image002_0003.png" width="269" height="19"></p>
+                  </li>
+                  <li>
+                    <p class="section-title"><img src="UNIT CIRCLE_clip_image004_0002.png" width="318" height="38"></p>
+                  </li>
+                  <li>
+                    <p class="section-title"><img src="UNIT CIRCLE_clip_image006_0000.png" width="331" height="38"></p>
+                  </li>
+                  <li>
+                    <p class="section-title"><img src="UNIT CIRCLE_clip_image008_0000.png" width="318" height="38"></p>
+                  </li>
+                  <li>
+                    <p class="section-title"><img src="UNIT CIRCLE_clip_image010.png" width="306" height="32"></p>
+                  </li>
+                </ul>
+          </div>
+            <div class="diagram">
+                <p><img src="Documents/OIP (2).jpeg" width="474" height="258" alt="Special Angles"></p>
+            </div>
+        </div>
+
+        <!-- Quadrants -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Quadrants</h2>
+                <p>The unit circle is divided into four quadrants, each with distinct characteristics:</p>
+                <ul>
+                    <li>
+                      <p><strong>Quadrant I:</strong> Both sine and cosine are positive.</p>
+                    </li>
+                    <li>
+                      <p><strong>Quadrant II:</strong> Sine is positive, cosine is negative.</p>
+                    </li>
+                    <li>
+                      <p><strong>Quadrant III:</strong> Both sine and cosine are negative.</p>
+                    </li>
+                    <li>
+                      <p><strong>Quadrant IV:</strong> Sine is negative, cosine is positive.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="diagram">
+                <img src="Documents/OIP.jpg" width="474" height="355" alt="Quadrants">            </div>
+        </div>
+</div>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

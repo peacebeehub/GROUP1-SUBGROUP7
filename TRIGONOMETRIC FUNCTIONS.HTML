@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Functions</title>
+<link rel="stylesheet"type="text/css"href="styles.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Professional light blue gradient */
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0044cc;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        .welcome-note {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            animation: fadeIn 2s;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            animation: fadeInUp 2s;
+        }
+
+        .content-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .content-right {
+            flex-shrink: 0;
+        }
+
+        .content-left p, .content-left ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #0044cc;
+            margin-bottom: 10px;
+        }
+
+        .content-right img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .back:hover {
+            color: #003399;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+<div class="container">
+        <h1>Trigonometric Functions</h1>
+
+        <!-- Welcome Note -->
+        <div class="welcome-note">
+            <p>Welcome to the Trigonometric Functions section. In this lesson, you will explore the fundamental trigonometric functions, their applications, and their representations on the unit circle. By understanding these concepts, you'll gain valuable insights into how angles and sides relate in trigonometry, as well as how to solve various real-world problems using these functions. Let’s dive into the world of sine, cosine, tangent, and more!</p>
+        </div>
+
+        <!-- Definition of Trigonometric Functions -->
+        <div class="content">
+            <div class="content-left">
+                <h2 class="section-title">Definition of Trigonometric Functions</h2>
+                <p>The main trigonometric functions are sine, cosine, and tangent, defined based on the sides of a right-angled triangle.</p>
+                <ul>
+                    <li><strong>Sine (sin):</strong> Opposite side / Hypotenuse.</li>
+                    <li><strong>Cosine (cos):</strong> Adjacent side / Hypotenuse.</li>
+                    <li><strong>Tangent (tan):</strong> Opposite side / Adjacent side.</li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <img src="Documents/Trigonometric-Functions-What-is.png" width="800" height="500" alt="Trigonometric Functions Illustration">            </div>
+        </div>
+
+    <!-- Trigonometric Functions on the Unit Circle -->
+        <!-- Reciprocal Trigonometric Functions -->
+<div class="content">
+            <div class="content-left">
+                <h2 class="section-title">Reciprocal Trigonometric Functions</h2>
+                <ul>
+                    <li><strong>Secant (sec):</strong> Reciprocal of cosine.</li>
+                    <li><strong>Cosecant (csc):</strong> Reciprocal of sine.</li>
+                    <li><strong>Cotangent (cot):</strong> Reciprocal of tangent.</li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <img src="Documents/Trigonometry-Reciprocal-Functions.jpg" width="940" height="788" alt="Reciprocal Trigonometric Functions">            </div>
+  </div>
+
+        <!-- Trigonometric Functions for Special Angles -->
+        <!-- Graphs of Trigonometric Functions -->
+<div class="content">
+            <div class="content-left">
+                <h2 class="section-title">Graphs of Trigonometric Functions</h2>
+                <p>Trigonometric functions are periodic and have specific shapes. The sine and cosine graphs oscillate between -1 and 1, while the tangent graph has vertical asymptotes at certain points.</p>
+            </div>
+            <div class="content-right">
+                <img src="Documents/xtrig-function-graphs.png.pagespeed.ic.uHq5_cCCxk.png" width="764" height="550" alt="Graphs of Sine, Cosine, and Tangent">            </div>
+  </div>
+
+    <!-- Trigonometric Identities -->
+    </div>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

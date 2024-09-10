@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Trigonometry</title>
+<link rel="stylesheet"type="text/css"href="styles.css"/>   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #f4f4f4, #ddd);
+            padding: 0;
+            margin: 0;
+            color: #333;
+font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0044cc;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        .welcome-note {
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #0044cc;
+            font-size: 1.2em;
+            animation: fadeInUp 2s;
+        }
+
+        .content {
+            text-align: justify;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #0044cc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            animation: fadeInUp 2s;
+        }
+
+        .image-text-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .image-text-container .image {
+            max-width: 400px;
+            height: auto;
+            margin-right: 20px;
+.image-text-container .image {
+            max-width: 400px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .image-text-container .text {
+            flex: 1;
+        }
+
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+            animation: slideIn 1.5s;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .back:hover {
+            color: #003399;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    .style1 {font-size: x-large}
+    .image-text-container1 {            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+<div class="container">
+        <h1>Introduction to Trigonometry</h1>
+
+        <!-- Welcome Note -->
+        <div class="welcome-note">
+            <p class="style1">Welcome to the fascinating world of trigonometry! This branch of mathematics deals with the relationships between the angles and sides of triangles. It is a crucial part of various fields including engineering, physics, astronomy, and even music theory. Understanding trigonometry opens doors to solving complex problems and exploring the mathematical beauty of shapes and patterns.</p>
+            <p class="style1">In this section, we will cover the basics of trigonometric functions and their applications. You will learn about the fundamental relationships that govern the angles and sides of triangles, and how these relationships are used to solve practical problems.</p>
+            <p class="style1">By the end of this section, you will have a solid foundation in trigonometric principles and be ready to tackle more advanced topics. Let's start our journey into trigonometry and discover how these mathematical concepts can be applied to real-world situations.</p>
+        </div>
+
+        <!-- Definition and Explanation -->
+        <div class="content">
+            <h2 class="section-title">What is Trigonometry?</h2>
+            <div class="image-text-container">
+                <p><img src="Documents/blob.jpeg" width="497" height="360" alt="Trigonometry Definition" class="image"></p>
+                <div class="text">
+                    <p>Trigonometry is a branch of mathematics that studies the relationships between the angles and sides of triangles. The word 'trigonometry' comes from the Greek words 'trigonon' (triangle) and 'metron' (measure), which means 'measuring triangles.' It is used to find unknown angles and sides in triangles based on known measurements, and it extends beyond triangles to describe periodic phenomena in mathematics, such as waves and oscillations.</p>
+                </div>
+          </div>
+        </div>
+
+        <!-- History and Development -->
+        <div class="content">
+            <h2 class="section-title">History and Development</h2>
+            <div class="image-text-container"><img src="Documents/trigonometry-6-638.jpg" width="431" height="462">
+              <div class="text">
+                <p>The origins of trigonometry can be traced back to ancient civilizations such as the Egyptians and Babylonians, who used rudimentary forms of trigonometry in astronomy and architecture. The Greek mathematician Hipparchus, often referred to as the father of trigonometry, made significant contributions by developing the first trigonometric tables. Later, Indian and Islamic scholars expanded these ideas and developed more advanced concepts. During the Renaissance, trigonometry became an essential part of navigation and astronomy, leading to its formalization and application in various scientific fields.</p>
+              </div>
+          </div></div>
+
+        <!-- Importance and Application -->
+        <div class="content">
+            <h2 class="section-title">Importance and Application</h2>
+            <div class="image-text-container">
+                <img src="Documents/blob (1).jpeg" width="607" height="502" alt="Importance of Trigonometry" class="image">
+                <div class="text">
+                    <p>Trigonometry is crucial in many fields including physics, engineering, computer science, and architecture. It helps in modeling periodic phenomena like sound waves, light waves, and electromagnetic waves. In engineering, trigonometry is used to analyze forces, design structures, and solve problems related to mechanical systems. It is also applied in fields such as navigation, astronomy, and even music theory, where waveforms are analyzed.</p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Key Concepts -->
+        <div class="content">
+            <h2 class="section-title">Key Concepts</h2>
+            <div class="image-text-container">
+              <p><img src="Documents/R.gif" width="419" height="230"></p>
+              <div class="text">
+                    <ul>
+                        <li>
+                          <p><strong>Angles:</strong> Measurement of rotation between two rays that share a common endpoint. Angles are measured in degrees or radians.</p>
+                        </li>
+                        <li>
+                          <p><strong>Triangles:</strong> A three-sided polygon. Trigonometric functions are primarily used to relate the angles and sides of triangles.</p>
+                        </li>
+                        <li>
+                          <p><strong>Waves:</strong> Sinusoidal patterns that describe periodic oscillations, fundamental to understanding phenomena like sound and light waves.</p>
+                        </li>
+                        <li>
+                          <p><strong>Circular Motion:</strong> The motion of an object in a circular path, which is analyzed using trigonometric functions to understand angular displacement, velocity, and acceleration.</p>
+                        </li>
+                    </ul>
+              </div>
+          </div>
+        </div>
+
+        <!-- Branches of Trigonometry -->
+  <div class="content">
+            <h2 class="section-title">Branches of Trigonometry</h2>
+    <div class="image-text-container">
+                <img src="Documents/spherical-trigonometry1-l.jpg" width="559" height="668" alt="Branches of Trigonometry" class="image">
+      <div class="text">
+<ul>
+                      <li>
+                        <p><strong>Plane Trigonometry:</strong> Deals with the study of triangles on a flat surface. It involves concepts like sine, cosine, and tangent functions.</p>
+                      </li>
+                      <li>
+                        <p><strong>Spherical Trigonometry:</strong> Focuses on the study of triangles on the surface of a sphere. It is used in astronomy and navigation.</p>
+                      </li>
+                      <li>
+                        <p><strong>Analytic Trigonometry:</strong> Uses algebraic methods to analyze trigonometric functions and solve equations involving trigonometric identities.</p>
+                      </li>
+                      <li>
+                        <p><strong>Applied Trigonometry:</strong> Applies trigonometric principles to solve real-world problems in various fields such as engineering, physics, and computer science.</p>
+                      </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solving Trigonometric Equations</title>
+<link rel="stylesheet"type="text/css"href="styles.css"/> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #e6f7ff, #ccf2ff);
+            padding: 0;
+            margin: 0;
+            color: #333;
+ 		font-size: 1.5em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+ .welcome-note {
+            background-color: #cceeff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: black;
+            font-size: 1.2em;
+            animation: fadeInUp 2s;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s;
+ 
+        }
+ .section-title {
+            font-size: 2em;
+            color: #0044cc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            animation: fadeInUp 2s;
+
+        .back {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #0044cc;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .back:hover {
+            color: #003399;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+  <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Solving Trigonometric Equations</h1>
+
+        <!-- Welcome Note -->
+        <div class="welcome-note">
+            <p>Welcome to the section on <strong>Solving Trigonometric Equations</strong>! Understanding how to solve these equations is essential for mastering trigonometry. This section will guide you through the various methods and techniques used to find the values of angles and solve trigonometric expressions. Whether you're tackling algebraic methods or applying trigonometric identities, you'll gain the skills needed to handle complex trigonometric problems effectively.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Introduction to Solving Trigonometric Equations</h2>
+                <p>Trigonometric equations involve trigonometric functions and require finding the values of angles that satisfy the equation. Solving these equations is crucial in many fields such as physics, engineering, and computer science. Mastering these equations will enable you to solve a wide range of problems involving angles and periodic functions.</p>
+            </div>
+        </div>
+
+        <!-- Basic Methods -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Basic Methods for Solving Trigonometric Equations</h2>
+                <p>There are several methods to solve trigonometric equations:</p>
+                <ul>
+                    <li><strong>Using Algebraic Methods:</strong> Isolate the trigonometric function and solve for the angle. For example, solving (sin x = 0.5) involves finding (x) where the sine function equals 0.5.</li>
+                    <li><strong>Using Inverse Trigonometric Functions:</strong> Use inverse functions to find the angle. For instance, (x=sin^-1(0.5)) gives the angle whose sine is 0.5.</li>
+                    <li><strong>Using Trigonometric Identities:</strong> Simplify the equation using identities like (sin^2x+cos^2x=1) to solve for unknown angles.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Examples -->
+        <div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Examples of Solving Trigonometric Equations</h2>
+                <p>Here are some examples of solving trigonometric equations:</p>
+                <ul>
+                    <li><strong>Example 1:</strong> Solve (sinx=0.5).</li>
+                    <li>Solution: (x=sin^-1(0.5)) and (x=180^circ - sin^-1(0.5)).</li>
+                </ul>
+                <ul>
+                  <li><strong>Example 2:</strong> Solve (cos 2x=0).</li>
+                  <li>Solution: Use the identity (cos 2x = 2 cos^2 x - 1) to find (x).</li>
+                </ul>
+          </div>
+        </div>
+
+        <!-- Applications and Practice Problems -->
+<div class="content">
+            <div class="content-text">
+                <h2 class="section-title">Applications and Practice Problems</h2>
+                <p>Solving trigonometric equations has numerous real-world applications, such as in engineering, physics, and navigation. Practice problems will help you hone your skills and apply what you've learned in practical scenarios:</p>
+				<ul><p><li>Practice Problem 1: Solve (tan x = √3) within the interval (0^circ &lt; x &lt; 360^circ).</li></p>
+              <li>Practice Problem 2: Find the angles for which (sin 2x = 1). </li>
+           </ul>
+        </div>
+		
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

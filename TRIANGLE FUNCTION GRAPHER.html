@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Function Grapher</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: light blue;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #graph {
+            width: 100%;
+            height: 450px;
+            margin: 20px auto;
+        }
+
+        .controls {
+            margin: 20px auto;
+        }
+
+        .controls label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .controls input, .controls select {
+            padding: 5px;
+            margin-right: 15px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            background-color: #0066ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .controls button:hover {
+            background-color: #0044cc;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <h1><span class="logo"><a href="#" style="font-size: 24px; font-weight: bold; color: #fff;"><img src="Documents/grapher.jfif" width="200" height="200"></a></span><a href="#" style="font-size: 24px; font-weight: bold; color: #fff;">_________________________________________________<img src="Documents/grapher.jfif" width="200" height="200"></a></h1>
+        <h1>Trigonometric Function Grapher</h1>
+        <p> A Trigonometric Function Grapher is a tool that allows users to visualize and explore the graphs of various trigonometric functions like sine, cosine, tangent, and their inverses. It typically includes controls for adjusting the parameters of the functions, such as amplitude, frequency, and phase shift, enabling users to see how these changes affect the shape and behavior of the graphs. </p>
+        <p><b>Explore the behavior of trigonometric functions by adjusting parameters and viewing the resulting graphs.</b></p>
+        <!-- Control Panel -->
+        <div class="controls">
+            <label for="functionType">Function:</label>
+            <select id="functionType">
+                <option value="sin">Sine</option>
+                <option value="cos">Cosine</option>
+                <option value="tan">Tangent</option>
+                <option value="asin">Inverse Sine (arcsin)</option>
+                <option value="acos">Inverse Cosine (arccos)</option>
+                <option value="atan">Inverse Tangent (arctan)</option>
+            </select>
+
+            <label for="amplitude">Amplitude:</label>
+            <input type="number" id="amplitude" value="1">
+
+            <label for="frequency">Frequency:</label>
+            <input type="number" id="frequency" value="1">
+
+            <label for="phaseShift">Phase Shift:</label>
+            <input type="number" id="phaseShift" value="0">
+
+            <button id="plotGraph">Plot</button>
+            <button id="resetGraph">Reset</button>
+        </div>
+
+        <!-- Graph Area -->
+        <div id="graph">
+            <canvas id="graphCanvas" width="850" height="450"></canvas>
+        </div>
+</div>
+
+    <script>
+        const canvas = document.getElementById('graphCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function plotGraph() {
+            const width = canvas.width;
+            const height = canvas.height;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const padding = 20; // Adding padding to avoid cutting off
+
+            // Clear the canvas
+            ctx.clearRect(0, 0, width, height);
+
+            // Draw x and y axes
+            ctx.beginPath();
+            ctx.moveTo(padding, centerY);
+            ctx.lineTo(width - padding, centerY);
+            ctx.moveTo(centerX, padding);
+            ctx.lineTo(centerX, height - padding);
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            // Add labels for radians on the x-axis
+            const radianLabels = [
+                { label: '-2π', x: centerX - (2 * Math.PI) * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: '-3π/2', x: centerX - (3 * Math.PI / 2) * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: '-π', x: centerX - Math.PI * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: '-π/2', x: centerX - Math.PI / 2 * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: '0', x: centerX },
+                { label: 'π/2', x: centerX + Math.PI / 2 * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: 'π', x: centerX + Math.PI * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: '3π/2', x: centerX + 3 * Math.PI / 2 * ((width - 2 * padding) / (4 * Math.PI)) },
+                { label: '2π', x: centerX + 2 * Math.PI * ((width - 2 * padding) / (4 * Math.PI)) }
+            ];
+
+            ctx.font = '14px Arial';
+            ctx.fillStyle = '#000000';
+            radianLabels.forEach(label => {
+                ctx.fillText(label.label, label.x - 10, centerY + 20);
+            });
+
+            // Add labels for the y-axis based on amplitude
+            const amplitude = parseFloat(document.getElementById('amplitude').value);
+            const yScale = (height - 2 * padding) / (2 * amplitude); // Dynamic scaling based on amplitude
+
+            const yAxisLabels = [
+                { label: amplitude.toFixed(1), y: centerY - amplitude * yScale },
+                { label: (amplitude / 2).toFixed(1), y: centerY - (amplitude / 2) * yScale },
+                { label: (amplitude * 3 / 4).toFixed(1), y: centerY - (amplitude * 3 / 4) * yScale },
+                { label: (amplitude / 4).toFixed(1), y: centerY - (amplitude / 4) * yScale },
+                { label: '0', y: centerY },
+                { label: (-amplitude / 4).toFixed(1), y: centerY + (amplitude / 4) * yScale },
+                { label: (-amplitude * 3 / 4).toFixed(1), y: centerY + (amplitude * 3 / 4) * yScale },
+                { label: (-amplitude / 2).toFixed(1), y: centerY + (amplitude / 2) * yScale },
+                { label: (-amplitude).toFixed(1), y: centerY + amplitude * yScale }
+            ];
+
+            yAxisLabels.forEach(label => {
+                ctx.fillText(label.label, centerX + 10, label.y + 5);
+            });
+
+            // Draw the graph based on user input
+            ctx.beginPath();
+            ctx.moveTo(padding, centerY);
+
+            const functionType = document.getElementById('functionType').value;
+            const frequency = parseFloat(document.getElementById('frequency').value);
+            const phaseShift = parseFloat(document.getElementById('phaseShift').value);
+
+            for (let x = padding; x < width - padding; x++) {
+                let angle = (x - centerX) * (2 * Math.PI / (width - 2 * padding)) * frequency + phaseShift;
+                let y;
+
+                switch (functionType) {
+                    case 'sin':
+                        y = amplitude * Math.sin(angle);
+                        break;
+                    case 'cos':
+                        y = amplitude * Math.cos(angle);
+                        break;
+                    case 'tan':
+                        y = amplitude * Math.tan(angle);
+                        break;
+                    case 'asin':
+                        y = amplitude * Math.asin((x - centerX) / ((width - 2 * padding) / 2));
+                        break;
+                    case 'acos':
+                        y = amplitude * Math.acos((x - centerX) / ((width - 2 * padding) / 2));
+                        break;
+                    case 'atan':
+                        y = amplitude * Math.atan(angle);
+                        break;
+                }
+
+                ctx.lineTo(x, centerY - y * yScale);
+            }
+
+            ctx.strokeStyle = '#ff0000';
+            ctx.stroke();
+        }
+
+        document.getElementById('plotGraph').addEventListener('click', plotGraph);
+
+        document.getElementById('resetGraph').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            plotGraph(); // Redraw axes and graph after reset
+        });
+
+        // Initial graph plot
+        plotGraph(); 
+    </script>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

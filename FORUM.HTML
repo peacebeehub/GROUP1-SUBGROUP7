@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .forum-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .forum-category {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .forum-category h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+
+        .forum-category p {
+            color: #555;
+        }
+
+        .forum-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .forum-category ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .forum-category ul li a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        .forum-category ul li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.HTML">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <h1>Forum</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search topics...">
+            <input type="submit" id="searchButton" value="Search">
+        </div>
+
+        <!-- Forum Categories -->
+        <div class="forum-section" id="forumContainer">
+
+            <!-- General Discussion -->
+            <div class="forum-category" data-category="General Discussion">
+                <h2>General Discussion</h2>
+                <p>Join conversations on various topics related to trigonometry and mathematics.</p>
+                <ul>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Introduction to Trigonometry</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Latest News and Updates</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Mathematical Applications</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Study Tips</a></li>
+                </ul>
+            </div>
+
+            <!-- Problem Solving -->
+            <div class="forum-category" data-category="Problem Solving">
+                <h2>Problem Solving</h2>
+                <p>Share and solve challenging trigonometric problems with the community.</p>
+                <ul>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Basic Problem Solving</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Intermediate Challenges</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Advanced Problem Discussions</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Trigonometry in Real Life</a></li>
+                </ul>
+            </div>
+
+            <!-- Resource Sharing -->
+            <div class="forum-category" data-category="Resource Sharing">
+                <h2>Resource Sharing</h2>
+                <p>Share useful learning materials like videos, articles, or references.</p>
+                <ul>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">E-books and Articles</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Recommended Video Tutorials</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">External Links</a></li>
+                    <li><a href="https://t.me/G1S7_Trigonometry_Hub">Online Calculators and Tools</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Trigonometry Forum. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle search functionality
+        document.getElementById('searchButton').addEventListener('click', function() {
+            var searchInput = document.getElementById('searchInput').value.toLowerCase();
+            var forumCategories = document.querySelectorAll('.forum-category');
+            
+            forumCategories.forEach(function(category) {
+                var categoryText = category.textContent.toLowerCase();
+                if (categoryText.includes(searchInput)) {
+                    category.style.display = '';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+</body>
+</html>

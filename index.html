@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Site</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <style>
+        /* Gradient Background */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #0066ff, #00ccff);
+            color: #fff;
+background-image:url("bg4.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+        }
+
+        /* Container for the content */
+        .blue-container {
+        max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+       
+        /* Dropdown Menu */
+        .navbar ul li ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            top: 40px;
+            left: 0;
+            padding: 10px 0;
+        }
+
+     
+
+        /* Welcome Section */
+        .welcome {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .welcome h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInDown 2s;
+        }
+
+        .welcome p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            animation: fadeInUp 2s;
+        }
+
+        .welcome a {
+            padding: 15px 30px;
+            background-color: #0044cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .welcome a:hover {
+            background-color: #003399;
+        }
+
+        /* Featured Section */
+        .featured {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .featured img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            animation: jump 2s infinite;
+        }
+
+        .featured h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s;
+        }
+
+        .featured p {
+            font-size: 20px;
+            animation: fadeInUp 2s;
+        }
+
+     
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes jump {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <a href="#"><img src="G1S7L.jpg" alt="Logo"></a>
+            <a href="#"><img src="snips/G1S7N.PNG" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Community</a>
+                <ul>
+                    <li><a href="FORUM.HTML">Forum</a></li>
+                    <li><a href="DISCUSSION.HTML">Discussion</a></li>
+                    <li><a href="Q&A.HTML">Q&A</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Practice Problems</a>
+                <ul>
+                    <li><a href="BASIC PROBLEM.HTML">Basic Problems</a></li>
+                    <li><a href="INTERMEDIATE PROBLEM.HTML">Intermediate Problems</a></li>
+                    <li><a href="ADVANCED PROBLEM.HTML">Advanced Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Lessons</a>
+                <ul>
+                    <li><a href="INTRO TO TRIGONOMETRY.HTML">Introduction to Trigonometry</a></li>
+                    <li><a href="UNIT CIRCLE.HTML">Unit Circle</a></li>
+                    <li><a href="TRIGONOMETRIC IDENTITIES.HTML">Trigonometric Identities</a></li>
+                    <li><a href="TRIGONOMETRIC FUNCTIONS.HTML">Trigonometric Functions</a></li>
+                    <li><a href="SOLVING TRIGONOMETRIC EQUATIONS.HTML">Solving Trigonometric Equations</a></li>
+                    <li><a href="APPLLICATIONS TRIGONOMETRY.HTML">Application of Trigonometry</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Interactive Tools</a>
+                <ul>
+ <li><a href="TRIGONOMETRIC CALCULATOR.html">Trigonometry Calculator</a></li>
+                    <li><a href="UNIT CIRCLE SIMULATOR.html">Unit Circle Simulator</a></li>
+                    <li><a href="TRIANGLE SOLVER.html">Triangle Solver</a></li>
+                    <li><a href="TRIANGLE FUNCTION GRAPHER.html">Trigonometric Function Grapher</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Video Tutorials</a>
+                <ul>
+                    <li><a href="TRIGONOMETRIC BASICS.HTML">Trigonometric Basics</a></li>
+                    <li><a href="ADVANCED TRIGONOMETRY.HTML">Advanced Trigonometry</a></li>
+                    <li><a href="REAL WORLD APPLICATIONS.HTML">Real World Applications</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+                <ul>
+                    <li><a href="REFERENCE MATERIAL.HTML">Reference Materials</a></li>
+                    <li><a href="E-BOOKS AND ARTICLES.HTML">E-books and Articles</a></li>
+                    <li><a href="EXTERNAL LINKS.HTML">External Links</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="OUR MISSION.HTML">Our Mission</a></li>
+                    <li><a href="CONTRIBUTORS.HTML">Contributors</a></li>
+                    <li><a href="CONTACT US.HTML">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Welcome Section -->
+    <div class="welcome">
+       <div class="container">
+         <h1>Welcome to Trigonometry Hub!</h1>
+           <b> <p>Your one-stop destination for mastering trigonometry concepts, solving problems, and enhancing your mathematical skills.</p>
+            <a href="INTRO TO TRIGONOMETRY.HTML">Get Started</a></b>
+        </div>
+    </div>
+
+    <!-- Featured Content Section -->
+    <div class="featured">
+        <div class="container">
+         
+            <h2>Featured: The Unit Circle</h2>
+            <b><p>Explore the core concepts of the Unit Circle, a fundamental tool in trigonometry. Dive into interactive tutorials and practice problems designed to help you master this essential topic.</p>
+        </b></div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <p>Follow us on <a href="https://t.me/G1S7_Trigonometry_Hub"><img src="tt.png" width="20" height="20">Telegram</a>, <a href="https://chat.whatsapp.com/KQ7oiEmDJitDEfjftI15XH"><img src="ww.jpg" width="20" height="20">WhatsApp</a>, <a href="https://www.youtube.com/@peacebee1"><img src="yy.jpg" width="20" height="20">YouTube</a></p>
+            <p>&copy; 2024 GROUP1-SUBGROUP7 Trigonometry Hub. All rights reserved.</p>
+      </div>
+    </div>
+
+</body>
+</html>
